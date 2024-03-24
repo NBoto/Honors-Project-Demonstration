@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 3075f468558140647aa0d7dd010f111c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 9a011fe8464159d4087570b796260266, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5d8204e77dee2c41a75d21ddf8feb74, type: 2}
     - target: {fileID: 919132149155446097, guid: 9a011fe8464159d4087570b796260266, type: 3}
       propertyPath: m_Name
       value: SlantWall 2
