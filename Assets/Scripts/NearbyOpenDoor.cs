@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NearbyOpenDoor : MonoBehaviour
 {
-
+    [SerializeField] AudioSource OpenSFX;
+    [SerializeField] AudioSource CloseSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class NearbyOpenDoor : MonoBehaviour
         if (Other.CompareTag("Player"))
         {
             this.GetComponent<Animator>().SetBool("PlayerNear", true);
+            OpenSFX.Play();
             //Debug.Log("In Radius");
         }
     }
@@ -30,6 +32,7 @@ public class NearbyOpenDoor : MonoBehaviour
         if (Other.CompareTag("Player"))
         {
             this.GetComponent<Animator>().SetBool("PlayerNear", false);
+            CloseSFX.Play();
         }
     }
 }
