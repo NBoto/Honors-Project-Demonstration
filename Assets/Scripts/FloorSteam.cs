@@ -5,10 +5,12 @@ using UnityEngine;
 public class FloorSteam : MonoBehaviour
 {
     [SerializeField] ParticleSystem Particles;
+    [SerializeField] AudioSource Audio;
     // Start is called before the first frame update
     void Start()
     {
         Particles.Stop();
+        Audio.Stop();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class FloorSteam : MonoBehaviour
         if (Other.CompareTag("Player"))
         {
             Particles.Play();
+            Audio.Play();
             //Debug.Log("In Radius");
         }
     }
@@ -30,6 +33,7 @@ public class FloorSteam : MonoBehaviour
         if (Other.CompareTag("Player"))
         {
             Particles.Stop();
+            Audio.Stop();
         }
     }
 }
